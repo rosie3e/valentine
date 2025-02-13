@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Valentine?</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #ffdde1;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            color: #ff4d6d;
+            margin: 0;
+        }
+        .heart {
+            font-size: 50px;
+            color: #ff4d6d;
+            animation: heartbeat 1s infinite alternate;
+            margin: 10px 0;
+        }
+        @keyframes heartbeat {
+            from { transform: scale(1); }
+            to { transform: scale(1.2); }
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        button {
+            background-color: #ff4d6d;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 10px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #ff1e4d;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hey <span id="boyfriend-name">[Boyfriend's Name]</span> ❤️</h1>
+        <p>Will you be my Valentine?</p>
+        <div class="heart">❤️</div>
+        <div class="buttons">
+            <button id="yes-button">Yes!</button>
+            <button id="no-button">No 😢</button>
+        </div>
+    </div>
+    <script>
+        document.getElementById("yes-button").addEventListener("click", function() {
+            alert("Yay! Can’t wait! ❤️");
+        });
+        document.getElementById("no-button").addEventListener("click", function() {
+            alert("Oh no! 💔 But I still like you!");
+        });
+    </script>
+</body>
+</html>
